@@ -64,11 +64,16 @@ if(canvas&&host){
     resize();
 
     if(!reduceMotion){
-      window.addEventListener('load',()=>{
-        if(window.gsap&&window.ScrollTrigger){
-          window.gsap.to(orbitGroup.rotation,{y:Math.PI*1.5,x:.16,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:1}});
-        }
-      },{once:true});
+      let scrollTween;
+      const setupScrollTrigger=()=>{
+        if(scrollTween||!window.gsap||!window.ScrollTrigger)return;
+        window.gsap.registerPlugin(window.ScrollTrigger);
+        scrollTween=window.gsap.to(orbitGroup.rotation,{y:Math.PI*2,x:.22,ease:'none',scrollTrigger:{trigger:host,start:'top top',end:'bottom top',scrub:1,invalidateOnRefresh:true}});
+        window.ScrollTrigger.refresh();
+      };
+      setupScrollTrigger();
+      if(document.readyState==='complete')setupScrollTrigger();
+      else window.addEventListener('load',setupScrollTrigger,{once:true});
     }
 
     let frame=0;
