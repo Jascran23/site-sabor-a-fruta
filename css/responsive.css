@@ -819,3 +819,17 @@
   .gallery { padding-bottom: 0; }
   .contact { padding-top: 36px; padding-bottom: 36px; }
 }
+
+.brand-logo {
+  display: block;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  object-fit: contain;
+}
+@media (max-width: 900px) {
+  .brand-logo { width: 24px; height: 24px; flex-basis: 24px; }
+}
+@media (max-width: 680px) {
+  .brand-logo { width: 22px; height: 22px; flex-basis: 22px; }
+}

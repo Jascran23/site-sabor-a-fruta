@@ -1,0 +1,8 @@
+{
+  "name": "Sabor a Fruta",
+  "short_name": "Sabor a Fruta",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f3ea",
+  "theme_color": "#15803d"
+}

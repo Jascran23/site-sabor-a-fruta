@@ -1,0 +1,32 @@
+# Sabor a Fruta
+
+> Distribuidora de polpas de frutas em Natal, Rio Grande do Norte. O site apresenta polpas 100% naturais e sem adição de açúcar.
+
+## Empresa
+
+- Página principal: [Sabor a Fruta](./index.html)
+- A empresa: [Missão, visão e valores](./index.html#empresa)
+
+A marca destaca o sabor da fruta, praticidade e cuidado na distribuição de polpas.
+
+## Produtos
+
+- Catálogo: [Nossos sabores](./produtos.html)
+- Sabores apresentados na página de produtos: goiaba, abacaxi, caju, maracujá, cajá e manga.
+- Tangerina também aparece na faixa de sabores da página inicial.
+
+## Qualidade
+
+O site apresenta as polpas como 100% naturais e sem adição de açúcar, com foco no sabor característico de cada fruta.
+
+## Informações institucionais
+
+A página da empresa apresenta missão, visão e valores. A distribuição é informada como atuante em Natal, Rio Grande do Norte.
+
+## Contato
+
+- [Fale com a gente](./index.html#contato)
+
+## Instagram
+
+- [instagram.com/saborafruta](https://instagram.com/saborafruta)
