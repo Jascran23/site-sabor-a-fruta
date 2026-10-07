@@ -45,6 +45,36 @@ if(flavorCarousel&&pulpFlavors.length){
   new ResizeObserver(fillFlavorTrack).observe(flavorCarousel);
 }
 
+const companyTablist=document.querySelector('[role="tablist"][aria-label="Missão, visão e valores"]');
+if(companyTablist){
+  const companyTabs=[...companyTablist.querySelectorAll('[role="tab"]')];
+  const companyPanels=[...document.querySelectorAll('[data-company-panel]')];
+  const activateCompanyTab=(tab,focus=false)=>{
+    companyTabs.forEach(item=>{
+      const selected=item===tab;
+      item.setAttribute('aria-selected',String(selected));
+      item.tabIndex=selected?0:-1;
+    });
+    companyPanels.forEach(panel=>{
+      panel.hidden=panel.id!==tab.getAttribute('aria-controls');
+    });
+    if(focus)tab.focus();
+  };
+  companyTabs.forEach(tab=>tab.addEventListener('click',()=>activateCompanyTab(tab)));
+  companyTablist.addEventListener('keydown',event=>{
+    const current=companyTabs.indexOf(document.activeElement);
+    if(current<0)return;
+    let next=current;
+    if(event.key==='ArrowRight')next=(current+1)%companyTabs.length;
+    else if(event.key==='ArrowLeft')next=(current-1+companyTabs.length)%companyTabs.length;
+    else if(event.key==='Home')next=0;
+    else if(event.key==='End')next=companyTabs.length-1;
+    else return;
+    event.preventDefault();
+    activateCompanyTab(companyTabs[next],true);
+  });
+}
+
 const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const gsap=window.gsap;
 if(gsap&&window.ScrollTrigger&&!reducedMotion){
@@ -62,7 +92,7 @@ if(gsap&&window.ScrollTrigger&&!reducedMotion){
   gsap.utils.toArray('.popular-card').forEach((card,index)=>{
     gsap.fromTo(card,{y:48,autoAlpha:0},{y:0,autoAlpha:1,ease:'none',scrollTrigger:{trigger:card,start:'top 62%',end:'top 28%',scrub:.65},delay:index*.04});
   });
-  gsap.fromTo('.campaign-image',{scale:1.1},{scale:1,ease:'none',scrollTrigger:{trigger:'.campaign',start:'top bottom',end:'bottom top',scrub:.8}});
+  gsap.fromTo('.campaign-photo-main > img',{scale:1.05},{scale:1,ease:'none',scrollTrigger:{trigger:'.campaign',start:'top bottom',end:'bottom top',scrub:.8}});
   window.addEventListener('load',()=>window.ScrollTrigger.refresh(),{once:true});
 }else{
   document.querySelectorAll('.reveal').forEach(element=>element.classList.add('visible'));
