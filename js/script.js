@@ -80,9 +80,20 @@ const gsap=window.gsap;
 if(gsap&&window.ScrollTrigger&&!reducedMotion){
   gsap.registerPlugin(window.ScrollTrigger);
   document.querySelectorAll('.reveal').forEach(element=>{
+    if(element.closest('.gallery,.quality'))return;
     element.classList.add('gsap-managed');
     gsap.fromTo(element,{autoAlpha:0,y:34},{autoAlpha:1,y:0,ease:'none',scrollTrigger:{trigger:element,start:'top 59%',end:'top 31%',scrub:.7,invalidateOnRefresh:true}});
   });
+
+  const animateSectionEntrance=(selector,trigger,start,stagger)=>{
+    const elements=gsap.utils.toArray(selector);
+    if(!elements.length)return;
+    elements.forEach(element=>element.classList.add('gsap-managed'));
+    gsap.timeline({scrollTrigger:{trigger,start,toggleActions:'play none none reverse',invalidateOnRefresh:true}})
+      .fromTo(elements,{autoAlpha:0,y:26},{autoAlpha:1,y:0,duration:.65,stagger,ease:'power2.out'});
+  };
+  animateSectionEntrance('.gallery .reveal','.gallery','top 82%',.09);
+  animateSectionEntrance('.quality .reveal','.quality','top 82%',.1);
 
   gsap.timeline({scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:.8,invalidateOnRefresh:true}})
     .to('.hero-product',{y:-82,rotation:11,scale:.88,ease:'none'},0)

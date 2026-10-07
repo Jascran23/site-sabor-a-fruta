@@ -27,7 +27,7 @@
 .campaign-support li { padding: 0 12px; color: #53725b; font-size: 8px; font-weight: 800; letter-spacing: .8px; line-height: 1.4; text-align: center; }
 .campaign-support li + li { border-left: 1px solid #dce3d6; }
 .intro { grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); align-items: center; gap: clamp(38px, 6vw, 86px); padding-top: 100px; padding-bottom: 100px; background: #f8f9f4; }
-.intro-image { height: clamp(390px, 40vw, 500px); min-height: 0; overflow: hidden; border-radius: 16px; background: #e8eee2; }
+.intro-image { height: clamp(390px, 40vw, 500px); min-height: 0; overflow: hidden; border-radius: 16px;}
 .intro-image::before { display: none; }
 .intro-image img { position: absolute; inset: 0; width: 100%; height: 100%; border-radius: inherit; clip-path: none; object-fit: contain; }
 .intro-image .image-tag { left: 18px; bottom: 18px; padding: 11px 14px; border-radius: 24px; font-size: 9px; letter-spacing: 1px; }
@@ -259,7 +259,6 @@
     align-items: stretch;
     gap: 0;
   }
-  .hero:before { width: 320px; height: 320px; left: -230px; top: 230px; }
   .hero-copy { max-width: none; }
   .hero h1 { max-width: 12ch; font-size: clamp(42px, 12vw, 54px); line-height: .98; letter-spacing: -.05em; }
   .hero-text { max-width: 38ch; margin: 16px 0 18px; font-size: 16px; line-height: 1.55; }
@@ -338,7 +337,7 @@
   .intro { display: flex; padding: 54px 20px; flex-direction: column; align-items: stretch; gap: 23px; }
   .intro-image { width: 100%; height: auto; max-height: none; aspect-ratio: 1.2; margin: 0; padding: 0; }
   .intro-image:before { display: none; }
-  .intro-image img { width: 100%; height: 100%; object-fit: cover; clip-path: none; border-radius: 8px; }
+  .intro-image img { width: 100%; height: 100%; clip-path: none; border-radius: 8px; }
   .intro-image .image-tag { left: 10px; bottom: 10px; padding: 8px 10px; font-size: 9px; letter-spacing: .7px; }
   .intro-sun { top: 10px; right: 10px; font-size: 30px; }
   .intro-copy { max-width: none; }
@@ -787,4 +786,36 @@
   .footer-columns p,
   .footer-columns a { font-size: 11px; }
   .footer-editorial .footer-bottom { align-items: flex-start; flex-direction: column; gap: 4px; font-size: 10px; }
+}
+
+/* Keep every Instagram tile inside the gallery grid at desktop widths. */
+.gallery {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+.gallery-grid {
+  width: 100%;
+  min-width: 0;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, .85fr) minmax(0, .8fr);
+}
+.gallery-tile,
+.gallery-quote { min-width: 0; }
+.gallery-tile img { min-width: 0; }
+@media (max-width: 900px) {
+  .gallery-grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr); }
+}
+@media (max-width: 680px) {
+  .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Balance the spacing around the centered contact panel. */
+.gallery { padding-bottom: 0; }
+.contact { padding-top: 76px; padding-bottom: 76px; }
+@media (max-width: 900px) {
+  .contact { padding-top: 60px; padding-bottom: 60px; }
+}
+@media (max-width: 680px) {
+  .gallery { padding-bottom: 0; }
+  .contact { padding-top: 36px; padding-bottom: 36px; }
 }
