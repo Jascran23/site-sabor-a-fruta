@@ -1,5 +1,5 @@
 // Mude para false para deixar os reveals visíveis sem animação durante capturas de tela.
-const ENABLE_REVEAL_ANIMATIONS=false;
+const ENABLE_REVEAL_ANIMATIONS=true;
 
 const header=document.querySelector('.header');
 const menuButton=document.querySelector('.menu-toggle');
