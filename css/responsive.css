@@ -1,4 +1,4 @@
-﻿/* Responsive layout overrides for the current Sabor a Fruta design. */
+/* Responsive layout overrides for the current Sabor a Fruta design. */
 
 .hero { grid-template-rows: minmax(0, 1fr) auto; }
 .hero-copy { grid-column: 1; grid-row: 1; }

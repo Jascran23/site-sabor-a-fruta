@@ -16,9 +16,12 @@
 .flavor-left .flavor-product{grid-column:3}
 .flavor-right .flavor-product{grid-column:1}
 .flavor-product.is-cutout{filter:drop-shadow(0 18px 18px #183d2928)}
+.flavor-picture{display:contents}
 @media(max-width:760px){.flavor-product{height:220px}}
 @media(max-width:560px){.flavor-row .flavor-product{grid-column:2;height:190px;margin:5px 0 0}}
 @media(prefers-reduced-motion:reduce){.flavor-product{transition:none}}
+.flavor-row.flavor-no-image .flavor-copy{grid-column:1/4;max-width:500px;justify-self:center}
+@media(max-width:560px){.flavor-row.flavor-no-image .flavor-copy{grid-column:2}}
 
 .track-progress{height:100%}
 .track-progress{transform:scaleY(0)}

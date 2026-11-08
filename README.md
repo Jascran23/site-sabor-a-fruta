@@ -23,29 +23,24 @@ public_html/
 
 O favicon atualmente disponível é `assets/images/favicon.svg`. Os arquivos `favicon.ico` e `apple-touch-icon.png` não estão no projeto; adicione-os à raiz pública somente se forem criados/fornecidos. O HTML usa o SVG que já existe. O `site.webmanifest` apenas prepara os metadados; não transforma o site em um PWA completo.
 
-### Domínio antes de publicar
+### Domínio oficial
 
-O domínio definitivo ainda não está configurado. Antes de publicar, substitua `https://SEU-DOMINIO.com.br` pelo domínio real nos seguintes locais:
-
-- `index.html`: canonical, Open Graph, imagem social e URL do Schema.org;
-- `produtos.html`: canonical, Open Graph e imagem social;
-- `robots.txt`: endereço do sitemap;
-- `sitemap.xml`: URLs da página inicial e de produtos.
+O domínio confirmado para publicação é `https://saborafruta.com.br`. Canonicals, metadados sociais, Schema.org, `robots.txt`, `sitemap.xml` e `llms.txt` usam a versão sem `www`. O `.htaccess` não configura redirecionamento para `www` nem força HTTPS; configure o redirecionamento na hospedagem depois de validar o SSL.
 
 ### Imagem para compartilhamento
 
-Ainda não existe imagem Open Graph no projeto. Crie `assets/images/og-image.jpg` com aproximadamente 1200 × 630 px antes de publicar. As tags Open Graph e Twitter já apontam para esse caminho usando o domínio placeholder.
+A imagem Open Graph `assets/images/og-image.jpg` continua pendente. As tags Open Graph e Twitter apontam para esse caminho no domínio oficial; crie o arquivo em 1200 × 630 px antes de publicar.
 
 ### Arquivos na raiz pública
 
-`robots.txt`, `sitemap.xml`, `llms.txt` e `site.webmanifest` devem ficar junto de `index.html` e `produtos.html` na raiz pública da hospedagem. O sitemap lista somente essas duas páginas atuais.
+Envie `.htaccess`, `404.html`, `index.html`, `produtos.html`, `politica-de-privacidade.html`, `robots.txt`, `sitemap.xml`, `llms.txt` e `site.webmanifest` diretamente para a raiz pública. O sitemap lista a página inicial, produtos e política de privacidade.
 
 ## SEO e conteúdo
 
 - `robots.txt` permite o rastreamento e aponta para o sitemap.
-- `sitemap.xml` inclui a página inicial e a página de produtos.
+- `sitemap.xml` inclui a página inicial, a página de produtos e a política de privacidade.
 - `llms.txt` resume informações institucionais e os canais de contato apresentados no site.
-- Os metadados canonical, Open Graph e Schema.org usam placeholders até que o domínio seja definido.
+- Os metadados canonical, Open Graph e Schema.org usam `https://saborafruta.com.br`; a imagem Open Graph ainda está pendente.
 - O site já possui favicon SVG em `assets/images/favicon.svg`.
 
 ## Observações técnicas

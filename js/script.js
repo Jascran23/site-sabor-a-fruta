@@ -99,9 +99,6 @@ if(gsap&&window.ScrollTrigger&&!reducedMotion){
     animateSectionEntrance('.gallery .reveal','.gallery','top 82%',.09);
     animateSectionEntrance('.quality .reveal','.quality','top 82%',.1);
 
-    gsap.utils.toArray('.popular-card').forEach((card,index)=>{
-      gsap.fromTo(card,{y:48,autoAlpha:0},{y:0,autoAlpha:1,ease:'none',scrollTrigger:{trigger:card,start:'top 62%',end:'top 28%',scrub:.65},delay:index*.04});
-    });
   }else{
     document.querySelectorAll('.reveal').forEach(element=>element.classList.add('visible'));
   }

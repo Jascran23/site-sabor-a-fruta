@@ -4,14 +4,14 @@
 
 ## Empresa
 
-- Página principal: [Sabor a Fruta](./index.html)
-- A empresa: [Missão, visão e valores](./index.html#empresa)
+- Página principal: [Sabor a Fruta](https://saborafruta.com.br/)
+- A empresa: [Missão, visão e valores](https://saborafruta.com.br/#empresa)
 
 A marca destaca o sabor da fruta, praticidade e cuidado na distribuição de polpas.
 
 ## Produtos
 
-- Catálogo: [Nossos sabores](./produtos.html)
+- Catálogo: [Nossos sabores](https://saborafruta.com.br/produtos.html)
 - Sabores apresentados na página de produtos: goiaba, abacaxi, caju, maracujá, cajá e manga.
 - Tangerina também aparece na faixa de sabores da página inicial.
 
@@ -25,8 +25,12 @@ A página da empresa apresenta missão, visão e valores. A distribuição é in
 
 ## Contato
 
-- [Fale com a gente](./index.html#contato)
+- [Fale com a gente](https://saborafruta.com.br/#contato)
 
 ## Instagram
 
 - [instagram.com/saborafruta](https://instagram.com/saborafruta)
+
+## Privacidade
+
+- Política de privacidade: [Como tratamos dados de navegação](https://saborafruta.com.br/politica-de-privacidade.html)

@@ -6,3 +6,7 @@
 
 .pulp-pack{position:absolute;right:9%;bottom:6%;width:27%;height:57%;min-width:105px;max-width:155px;background:linear-gradient(155deg,#19a84d 0 29%,#f7f0c8 29% 74%,#f0d833 74%);border:2px solid #fff9;border-radius:12px 12px 7px 7px;box-shadow:0 14px 28px #15231255;display:flex;align-items:center;justify-content:center;flex-direction:column;transform:rotate(3deg);color:#fff;text-align:center;padding:9px 5px 6px}.pulp-pack:before{content:'';position:absolute;top:-8px;left:18%;right:18%;height:9px;border-radius:4px 4px 0 0;background:#dce6ce;border:1px solid #ffffffa8}.pulp-pack b{font:800 11px/1 var(--sans);letter-spacing:-.5px;text-shadow:0 1px 2px #12432080}.pulp-pack>span{font-size:7px;letter-spacing:1.5px;color:#234d2d;margin-top:auto}.pulp-pack strong{font:800 clamp(14px,2vw,22px)/1 var(--sans);letter-spacing:-1px;color:#f8fff2;text-shadow:0 1px 4px #173a2280}.pulp-pack small{font:700 6px var(--sans);letter-spacing:1.2px;color:#1c642f;margin-top:5px}
 @media(max-width:680px){.pulp-pack{width:30%;height:56%;right:7%;min-width:95px}}
+
+.image-source{display:contents}
+.world-left{background-image:url('../assets/images/abacaxi.jpg');background-image:image-set(url('../assets/images/optimized-abacaxi.webp') type('image/webp'),url('../assets/images/abacaxi.jpg') type('image/jpeg'))}
+.world-right{background-image:url('../assets/images/maracuja.jpg');background-image:image-set(url('../assets/images/optimized-maracuja.webp') type('image/webp'),url('../assets/images/maracuja.jpg') type('image/jpeg'))}

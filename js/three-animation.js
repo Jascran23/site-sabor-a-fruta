@@ -1,4 +1,6 @@
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js';
+const threeModuleUrl='https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js';
+
+import(threeModuleUrl).then((THREE)=>{
 
 const canvas=document.querySelector('.hero-canvas');
 const host=document.querySelector('.hero-art');
@@ -108,3 +110,4 @@ if(canvas&&host){
     canvas.remove();
   }
 }
+}).catch(()=>document.querySelector('.hero-canvas')?.remove());
