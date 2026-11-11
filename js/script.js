@@ -12,7 +12,7 @@ document.querySelector('#year').textContent=new Date().getFullYear();
 
 // Edite este array para adicionar, remover ou reorganizar os cards do carrossel.
 const showcaseProducts=[
-  {name:'Goiaba',description:'Doce, perfumada e cheia de brasilidade.',image:'assets/images/insta-goiaba.webp',alt:'Arte promocional da polpa de goiaba Sabor a Fruta',width:865,height:1080,fit:'cover'},
+  {name:'Goiaba',description:'Doce, perfumada e cheia de brasilidade.',image:'assets/images/polpa-maracuja.png', webp:'assets/images/optimized-polpa-maracuja-800.webp',alt:'Arte promocional da polpa de goiaba Sabor a Fruta',width:865,height:1080,fit:'contain'},
   {name:'Abacaxi',description:'Um toque tropical a cada receita.',image:'assets/images/insta-abacaxi.jpg',webp:'assets/images/optimized-insta-abacaxi.webp',alt:'Arte promocional da polpa de abacaxi Sabor a Fruta',width:1080,height:1080,fit:'cover'},
   {name:'Caju',description:'Um sabor marcante e genuinamente brasileiro.',image:'assets/images/insta-caju.jpg',webp:'assets/images/optimized-insta-caju.webp',alt:'Arte promocional da polpa de caju Sabor a Fruta',width:1080,height:1080,fit:'cover'},
   {name:'Maracujá',description:'Marcante do primeiro ao último sabor.',image:'assets/images/polpa-maracuja.png',webp:'assets/images/optimized-polpa-maracuja-800.webp',alt:'Embalagem da polpa de maracujá Sabor a Fruta',width:1106,height:1422,fit:'contain'},
