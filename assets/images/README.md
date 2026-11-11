@@ -11,6 +11,7 @@ Todas as imagens ficam nesta pasta para que um mesmo arquivo possa ser reutiliza
 - `frutas-frescas.jpg`: imagem da seção “Qualidade que se sente”.
 - `abacaxi.jpg` e `maracuja.jpg`: fundos da seção de frutas.
 - `insta-abacaxi.jpg`, `insta-caju.jpg` e `insta-morango.webp`: galeria.
+- `insta-goiaba.webp`, `insta-abacaxi.jpg`, `insta-caju.jpg`, `polpa-maracuja.png` e `manga.jpg`: cards do carrossel de produtos em `index.html`, com dados no array `showcaseProducts` de `js/script.js`.
 
 Os arquivos `optimized-*.webp` são derivados WebP mantidos ao lado dos originais. `optimized-sabor-monkey-logo.webp` é a versão reduzida usada no cabeçalho; `optimized-polpa-maracuja-800.webp` é a versão reduzida usada nas embalagens exibidas. As páginas escolhem a versão WebP com `<picture>` ou `image-set()` onde configurado; os originais permanecem disponíveis como fallback ou fonte editável.
 

@@ -109,15 +109,17 @@
       <div class="intro-image reveal"><picture class="image-source"><source srcset="assets/images/optimized-sabor-monkey.webp" type="image/webp"><img src="assets/images/sabor-monkey.png" alt="Mascote da Sabor a Fruta segurando um copo de suco" width="1280" height="1229" loading="lazy" decoding="async"></picture><span class="intro-sun" aria-hidden="true">✳</span></div>
     </section>
 
-    <section class="products section-pad" id="produtos">
-      <div class="section-heading reveal"><div><p class="eyebrow"><span></span> Polpas de frutas</p><h2>Qual vai ser<br><em>o seu sabor?</em></h2></div><p>Da goiaba ao maracujá, tem sabor de fruta<br>para deixar seus momentos mais gostosos.</p><a class="products-all" href="produtos.html">VER TODOS <span>↗</span></a></div>
-      <div class="product-grid">
-        <article class="product-card product-feature reveal"><div class="product-image guava"><span class="product-index">POLPA DE FRUTA</span><span class="product-symbol">✳</span><span class="pulp-pack"><picture class="image-source"><source srcset="assets/images/optimized-polpa-maracuja-800.webp" type="image/webp"><img src="assets/images/polpa-maracuja.png" alt="Embalagem da polpa de maracujá Sabor a Fruta" width="1106" height="1422" loading="lazy" decoding="async"></picture></span></div><div class="product-meta"><h3>Goiaba</h3><p>Doce, perfumada e cheia de brasilidade.</p><span class="product-arrow">↗</span></div></article>
-        <article class="product-card reveal"><div class="product-image pineapple"><span class="product-index">POLPA DE FRUTA</span><span class="pulp-pack pack-pineapple"><picture class="image-source"><source srcset="assets/images/optimized-polpa-maracuja-800.webp" type="image/webp"><img src="assets/images/polpa-maracuja.png" alt="Embalagem da polpa de maracujá Sabor a Fruta" width="1106" height="1422" loading="lazy" decoding="async"></picture></span></div><div class="product-meta"><h3>Abacaxi</h3><p>Um toque tropical a cada receita.</p><span class="product-arrow">↗</span></div></article>
-        <article class="product-card reveal"><div class="product-image passion"><span class="product-index">POLPA DE FRUTA</span><span class="pulp-pack pack-passion"><picture class="image-source"><source srcset="assets/images/optimized-polpa-maracuja-800.webp" type="image/webp"><img src="assets/images/polpa-maracuja.png" alt="Embalagem da polpa de maracujá Sabor a Fruta" width="1106" height="1422" loading="lazy" decoding="async"></picture></span></div><div class="product-meta"><h3>Maracujá</h3><p>Marcante do primeiro ao último sabor.</p><span class="product-arrow">↗</span></div></article>
-        <article class="product-card reveal"><div class="product-image mango"><span class="product-index">POLPA DE FRUTA</span><span class="pulp-pack pack-mango"><picture class="image-source"><source srcset="assets/images/optimized-polpa-maracuja-800.webp" type="image/webp"><img src="assets/images/polpa-maracuja.png" alt="Embalagem da polpa de maracujá Sabor a Fruta" width="1106" height="1422" loading="lazy" decoding="async"></picture></span></div><div class="product-meta"><h3>Manga</h3><p>Suave, cremosa, irresistivelmente tropical.</p><span class="product-arrow">↗</span></div></article>
+    <section class="products section-pad" id="produtos" aria-labelledby="products-title">
+      <div class="section-heading reveal"><div><p class="eyebrow"><span></span> Polpas de frutas</p><h2 id="products-title">Qual vai ser<br><em>o seu sabor?</em></h2></div><p>Da goiaba ao maracujá, tem sabor de fruta<br>para deixar seus momentos mais gostosos.</p><a class="products-all" href="produtos.html">VER TODOS <span>↗</span></a></div>
+      <div class="product-carousel" data-product-carousel aria-label="Carrossel de sabores">
+        <button class="product-carousel-arrow product-carousel-prev" type="button" data-product-prev aria-label="Ver produto anterior">‹</button>
+        <div class="product-carousel-viewport" data-product-viewport tabindex="0" role="region" aria-label="Produtos. Use as setas do teclado ou arraste para navegar.">
+          <div class="product-grid product-carousel-track" data-product-track></div>
+        </div>
+        <button class="product-carousel-arrow product-carousel-next" type="button" data-product-next aria-label="Ver próximo produto">›</button>
+        <div class="product-carousel-footer"><div class="product-carousel-dots" data-product-dots role="group" aria-label="Escolher produto"></div><span class="product-carousel-count" data-product-count aria-live="polite"></span></div>
       </div>
-      <!-- <p class="product-footnote">Conheça também os sabores cajá, caju e maracujá no nosso Instagram. Consulte a disponibilidade.</p> -->
+      <noscript><p class="product-carousel-fallback">Ative o JavaScript para navegar pelos sabores. <a href="produtos.html">Veja todos os produtos.</a></p></noscript>
     </section>
 
     <section class="campaign campaign-editorial" aria-labelledby="campaign-title">
