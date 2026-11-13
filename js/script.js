@@ -1,5 +1,5 @@
 // Mude para false para deixar os reveals visíveis sem animação durante capturas de tela.
-const ENABLE_REVEAL_ANIMATIONS=true;
+const ENABLE_REVEAL_ANIMATIONS=false;
 
 const header=document.querySelector('.header');
 const menuButton=document.querySelector('.menu-toggle');
@@ -46,36 +46,6 @@ if(flavorCarousel&&pulpFlavors.length){
   };
   fillFlavorTrack();
   new ResizeObserver(fillFlavorTrack).observe(flavorCarousel);
-}
-
-const companyTablist=document.querySelector('[role="tablist"][aria-label="Missão, visão e valores"]');
-if(companyTablist){
-  const companyTabs=[...companyTablist.querySelectorAll('[role="tab"]')];
-  const companyPanels=[...document.querySelectorAll('[data-company-panel]')];
-  const activateCompanyTab=(tab,focus=false)=>{
-    companyTabs.forEach(item=>{
-      const selected=item===tab;
-      item.setAttribute('aria-selected',String(selected));
-      item.tabIndex=selected?0:-1;
-    });
-    companyPanels.forEach(panel=>{
-      panel.hidden=panel.id!==tab.getAttribute('aria-controls');
-    });
-    if(focus)tab.focus();
-  };
-  companyTabs.forEach(tab=>tab.addEventListener('click',()=>activateCompanyTab(tab)));
-  companyTablist.addEventListener('keydown',event=>{
-    const current=companyTabs.indexOf(document.activeElement);
-    if(current<0)return;
-    let next=current;
-    if(event.key==='ArrowRight')next=(current+1)%companyTabs.length;
-    else if(event.key==='ArrowLeft')next=(current-1+companyTabs.length)%companyTabs.length;
-    else if(event.key==='Home')next=0;
-    else if(event.key==='End')next=companyTabs.length-1;
-    else return;
-    event.preventDefault();
-    activateCompanyTab(companyTabs[next],true);
-  });
 }
 
 const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;

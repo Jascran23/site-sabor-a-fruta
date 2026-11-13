@@ -35,6 +35,7 @@
   <link rel="stylesheet" href="css/styles-type.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/company-cards.css">
   <link rel="stylesheet" href="css/privacy-consent.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
@@ -82,27 +83,25 @@
         <p class="eyebrow"><span></span> Nossa empresa</p>
         <h2>Um propósito<br>em cada <em>fruta.</em></h2>
         <p class="company-intro">Conheça os princípios que guiam a Sabor a Fruta e cada polpa que chega até você.</p>
-        <div class="company-tabs" role="tablist" aria-label="Missão, visão e valores">
-          <button class="company-tab" id="company-tab-missao" type="button" role="tab" aria-selected="true" aria-controls="company-panel-missao" tabindex="0" data-company-tab="missao">Missão</button>
-          <button class="company-tab" id="company-tab-visao" type="button" role="tab" aria-selected="false" aria-controls="company-panel-visao" tabindex="-1" data-company-tab="visao">Visão</button>
-          <button class="company-tab" id="company-tab-valores" type="button" role="tab" aria-selected="false" aria-controls="company-panel-valores" tabindex="-1" data-company-tab="valores">Valores</button>
-        </div>
         <div class="company-panels">
-          <section class="company-panel" id="company-panel-missao" role="tabpanel" aria-labelledby="company-tab-missao" data-company-panel="missao">
+          <article class="company-panel company-card" id="company-panel-missao" data-company-card="missao">
+            <p class="company-card-label">01 <span>Missão</span></p>
             <h3>Levar o sabor da fruta de verdade a mais momentos.</h3>
             <p>Distribuir polpas de frutas com qualidade e praticidade, preservando o sabor natural e facilitando a rotina das pessoas.</p>
             <ul><li>Frutas como protagonistas</li><li>Praticidade para o dia a dia</li><li>Sem adição de açúcar</li></ul>
-          </section>
-          <section class="company-panel" id="company-panel-visao" role="tabpanel" aria-labelledby="company-tab-visao" data-company-panel="visao" hidden>
+          </article>
+          <article class="company-panel company-card" id="company-panel-visao" data-company-card="visao">
+            <p class="company-card-label">02 <span>Visão</span></p>
             <h3>Ser uma escolha de confiança em todo o Rio Grande do Norte.</h3>
             <p>Crescer junto com nossos clientes e levar cada vez mais longe a qualidade e o sabor das polpas Sabor a Fruta.</p>
             <ul><li>Estar presente em mais momentos</li><li>Ampliar o acesso a bons sabores</li><li>Construir relações duradouras</li></ul>
-          </section>
-          <section class="company-panel" id="company-panel-valores" role="tabpanel" aria-labelledby="company-tab-valores" data-company-panel="valores" hidden>
+          </article>
+          <article class="company-panel company-card" id="company-panel-valores" data-company-card="valores">
+            <p class="company-card-label">03 <span>Valores</span></p>
             <h3>Cuidado, verdade e respeito em cada polpa.</h3>
             <p>É assim que fazemos escolhas e cuidamos de cada etapa, valorizando a fruta e as pessoas que compartilham esse sabor.</p>
             <ul><li>Qualidade em cada detalhe</li><li>Transparência com nossos clientes</li><li>Respeito à fruta e à sua origem</li></ul>
-          </section>
+          </article>
         </div>
         <div class="intro-signature">Feito com fruta, <span>Saborafruta</span></div>
       </div>
